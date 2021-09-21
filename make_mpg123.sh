@@ -9,4 +9,4 @@ cp build/arm64/include/mpg123.h build/include/
 cp build/arm64/include/fmt123.h build/include/
 
 mkdir -p build/licenses
-cp /tmp/mpg123-1.26.5-x86_64/COPYING build/licenses/mpg123-1.26.5-COPYING.txt
+cp /tmp/mpg123-1.29.0-x86_64/COPYING build/licenses/mpg123-1.29.0-COPYING.txt

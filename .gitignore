@@ -1,2 +1,4 @@
 build/
-SDL-macOS-UniversalBinaries/
+SDL-macOS-UniversalBinaries-*/
+SDL*
+mpg123*

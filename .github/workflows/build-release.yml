@@ -1,5 +1,8 @@
 name: Build Release
-on: [push]
+on:
+  push:
+    tags:
+      - '*'
 jobs:
   Build-Release:
     runs-on: macos-10.15
@@ -16,12 +19,12 @@ jobs:
       - run: ./make_image.sh
       - run: ./make_mixer.sh
       - run: ./installname.sh
-      - run: ./pack.sh
+      - run: ./pack.sh ${{ github.ref }}
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: SDL-macOS-UniversalBinaries.tgz
-          asset_name: SDL-macOS-UniversalBinaries.tgz
+          file: SDL-macOS-UniversalBinaries-${{ github.ref }}.tgz
+          asset_name: SDL-macOS-UniversalBinaries-${{ github.ref }}.tgz
           tag: ${{ github.ref }}
           overwrite: true
