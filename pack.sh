@@ -1,7 +1,6 @@
 #!/bin/bash
 
-NAME=SDL-macOS-UniversalBinaries-${1}
-echo ${NAME}
+NAME=SDL-macOS-UniversalBinaries
 
 mkdir -p ${NAME}/lib ${NAME}/include
 cp -R build/include/SDL2 ${NAME}/include/

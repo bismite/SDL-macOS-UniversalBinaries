@@ -7,5 +7,5 @@ for url in \
   http://mpg123.de/download/mpg123-1.29.0.tar.bz2
 do
   echo $url
-  curl "-JOL#" -C - $url
+  curl "-JOL#" $url
 done
