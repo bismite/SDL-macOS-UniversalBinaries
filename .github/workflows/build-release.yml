@@ -12,8 +12,6 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - run: ./download.sh
-      - run: ./make_mpg123-arm64.sh
-      - run: ./make_mpg123-x86_64.sh
       - run: ./make_mpg123.sh
       - run: ./make_sdl.sh
       - run: ./make_image.sh
